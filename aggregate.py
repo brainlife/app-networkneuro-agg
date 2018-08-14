@@ -31,6 +31,12 @@ with open('config.json') as config_f:
     count_mean = numpy.mean(counts, axis=0)
     numpy.savetxt('count.mean.csv', count_mean)
 
+layout = {
+    "yaxis": {
+        "autorange": "reversed"
+    }
+}
+
 #generate heatmap from density std/mean
 plot = {}
 plot["type"] = "plotly"
@@ -40,11 +46,7 @@ plot["data"] = [{
     "colorscale": "Portland",
     "z": density_std.tolist(),
 }]
-plot["layout"] = {
-    "yaxis": {
-        "autorange": "reversed"
-    }
-}
+plot["layout"] = layout
 plots.append(plot)
 
 plot = {}
@@ -55,7 +57,7 @@ plot["data"] = [{
     "colorscale": "Hot",
     "z": density_mean.tolist(),
 }]
-#plot["layout"] = {}
+plot["layout"] = layout
 plots.append(plot)
 
 plot = {}
@@ -66,7 +68,7 @@ plot["data"] = [{
     "colorscale": "Portland",
     "z": count_std.tolist(),
 }]
-#plot["layout"] = {}
+plot["layout"] = layout
 plots.append(plot)
 
 plot = {}
@@ -77,7 +79,7 @@ plot["data"] = [{
     "colorscale": "Hot",
     "z": count_mean.tolist(),
 }]
-#plot["layout"] = {}
+plot["layout"] = layout
 plots.append(plot)
 
 #save product.json
