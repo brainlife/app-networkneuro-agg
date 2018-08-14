@@ -21,20 +21,25 @@ with open('config.json') as config_f:
     numpy.savetxt('density.mean.csv', density_mean)
 
 #generate heatmap from density std/mean
-density_std_data = {
-    "type": "heatmap",
-    "colorscale": "Portland",
-    "z": density_std.tolist(),
-}
-density_mean_data = {
-    "type": "heatmap",
-    "colorscale": "Portland",
-    "z": density_mean.tolist(),
-}
 plot = {}
 plot["type"] = "plotly"
 plot["name"] = "density std"
-plot["data"] = [density_std_data, density_mean_data]
+plot["data"] = [{
+    "type": "heatmap",
+    "colorscale": "Portland",
+    "z": density_std.tolist(),
+}]
+plot["layout"] = {}
+plots.append(plot)
+
+plot = {}
+plot["type"] = "plotly"
+plot["name"] = "density std"
+plot["data"] = [{
+    "type": "heatmap",
+    "colorscale": "Hot",
+    "z": density_mean.tolist(),
+}]
 plot["layout"] = {}
 plots.append(plot)
 
