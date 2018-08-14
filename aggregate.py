@@ -40,7 +40,11 @@ plot["data"] = [{
     "colorscale": "Portland",
     "z": density_std.tolist(),
 }]
-#plot["layout"] = {}
+plot["layout"] = {
+    "yaxis": {
+        "autorange": "reversed"
+    }
+}
 plots.append(plot)
 
 plot = {}
