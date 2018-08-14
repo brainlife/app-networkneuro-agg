@@ -34,6 +34,6 @@ plots.append(plot)
 
 #save product.json
 product = {}
-product["brainlfe"] = plots
+product["brainlife"] = plots
 with open("product.json", "w") as fp:
     json.dump(product, fp)
