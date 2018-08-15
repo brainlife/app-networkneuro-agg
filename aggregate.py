@@ -32,10 +32,14 @@ with open('config.json') as config_f:
     numpy.savetxt('count.mean.csv', count_mean)
 
 layout = {
-    "yaxis": {
-        "autorange": "reversed"
+    "xaxis": {
         "constrain": "domain"
-    }
+    },
+    "yaxis": {
+        "autorange": "reversed",
+        "scaleanchor": "x",
+    },
+
 }
 
 #generate heatmap from density std/mean
