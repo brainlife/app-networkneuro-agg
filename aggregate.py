@@ -34,6 +34,7 @@ with open('config.json') as config_f:
 layout = {
     "yaxis": {
         "autorange": "reversed"
+        "constrain": "domain"
     }
 }
 
