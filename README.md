@@ -10,7 +10,7 @@
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-lightgrey.svg" alt="MIT license"></a>
 </p>
 
-## 🧠 At a glance
+## At a glance
 
 <!-- brainlife-app:begin (generated from the App manifest; edit the manifest, not this block) -->
 
@@ -20,11 +20,11 @@ Reads density.csv and count.csv from each input, computes the element-wise mean 
 
 | | |
 |---|---|
-| 📥 **Inputs** | `neuro/networkneuro` |
-| ⚙️ **Resources** | 1 CPUs |
-| 🔗 **Run it** | [doi.org/10.25663/bl.app.89](https://doi.org/10.25663/bl.app.89) |
+| **Inputs** | `neuro/networkneuro` |
+| **Resources** | 1 CPUs |
+| **Run it** | [doi.org/10.25663/bl.app.89](https://doi.org/10.25663/bl.app.89) |
 
-#### 📥 Inputs
+#### Inputs
 
 | Input | Datatype | Required | Description |
 |---|---|---|---|
@@ -32,15 +32,15 @@ Reads density.csv and count.csv from each input, computes the element-wise mean 
 
 <!-- brainlife-app:end -->
 
-## 🚀 Running the App
+## Running the App
 
-### ☁️ On brainlife.io
+### On brainlife.io
 
 Open the App at [doi.org/10.25663/bl.app.89](https://doi.org/10.25663/bl.app.89), select several `neuro/networkneuro` datasets from your project and press **Execute**. Each input must contain `density.csv` and `count.csv`, and all matrices must have the same size (that is, come from the same parcellation).
 
 The App computes the element-wise mean and standard deviation of the density and count matrices across inputs, and shows four heatmaps (density mean, density std, count mean, count std) on the results page. It does not register an output datatype: the aggregated matrices remain in the job's working directory.
 
-### 💻 Locally
+### Locally
 
 The App runs directly on the host (no container). You need Python with NumPy.
 
@@ -59,7 +59,7 @@ The App runs directly on the host (no container). You need Python with NumPy.
    ./main
    ```
 
-## 📦 Outputs
+## Outputs
 
 ```text
 density.mean.csv   element-wise mean of the density matrices
@@ -71,11 +71,11 @@ product.json       plotly heatmaps of the four matrices, shown on brainlife.io
 
 The matrices are written with NumPy's default (space) delimiter.
 
-## 🩺 Troubleshooting
+## Troubleshooting
 
 - **The App fails while loading an input or computing the mean**: every input directory must contain both `density.csv` and `count.csv`, and all matrices must have the same dimensions.
 
-## 📚 Citing
+## Citing
 
 > [!TIP]
 > If you use this App in your work, please cite the App, the software it builds on and brainlife.io (below). GitHub's **Cite this repository** button gives the App citation in APA and BibTeX.
@@ -84,11 +84,11 @@ The matrices are written with NumPy's default (space) delimiter.
 - Hayashi S, Caron BA, Heinsfeld AS, et al. brainlife.io: a decentralized and open-source cloud platform to support neuroscience research. *Nature Methods* 21:809–813 (2024). [doi:10.1038/s41592-024-02237-2](https://doi.org/10.1038/s41592-024-02237-2)
 - Avesani P, McPherson B, Hayashi S, et al. The open diffusion data derivatives, brain data upcycling via integrated publishing of derivatives and reproducible open cloud services. *Scientific Data* 6:69 (2019). [doi:10.1038/s41597-019-0073-y](https://doi.org/10.1038/s41597-019-0073-y)
 
-## 👥 Authors
+## Authors
 
 - Soichi Hayashi
 
-## 💰 Funding
+## Funding
 
 [![Wellcome-226486/Z/22/Z](https://img.shields.io/badge/Wellcome-226486%2FZ%2F22%2FZ-purple.svg)](https://wellcome.org/)
 [![NIH-NINDS-U24NS140384](https://img.shields.io/badge/NIH_NINDS-U24NS140384-green.svg)](https://reporter.nih.gov/project-details/11261037)
@@ -107,6 +107,6 @@ The matrices are written with NumPy's default (space) delimiter.
 
 <sub>brainlife.io is publicly funded, and acknowledging that support helps keep it running. This App was developed with support from Wellcome, the U.S. National Institutes of Health (including the BRAIN Initiative BRAIN CONNECTS program: The Axonal Projectome EXchange, U24NS140384, and the Center for Mesoscale Connectomics, UM1NS132207) and the U.S. National Science Foundation.</sub>
 
-## ⚖️ License
+## License
 
 MIT.
